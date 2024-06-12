@@ -1,0 +1,24 @@
+ul {
+  list-style: none;
+}
+
+.gallery {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.gallery-link {
+  text-decoration: none;
+  cursor: url(../svg/cursor.svg), pointer;
+}
+
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  transition: 0.7s;
+}
+
+.gallery-image:hover {
+  transform: scale(1.03);
+}

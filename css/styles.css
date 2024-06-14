@@ -22,3 +22,7 @@ ul {
 .gallery-image:hover {
   transform: scale(1.03);
 }
+
+.full-image {
+  width: 1112px;
+}

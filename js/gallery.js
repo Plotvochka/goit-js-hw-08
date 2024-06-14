@@ -85,3 +85,25 @@ const galleryImage = images
   .join("");
 
 gallery.insertAdjacentHTML("beforeend", galleryImage);
+
+gallery.addEventListener("click", openImg);
+
+function openImg(evt) {
+  if (evt.target.nodeName !== "IMG") {
+    return;
+  }
+
+  const instance = basicLightbox.create(`
+    <div class="modal">
+        <img
+          class="full-image"
+          src="${evt.target.dataset.source}"
+          alt ="${evt.target.alt}"
+        />
+    </div>
+`);
+
+  instance.show();
+  const close = document.querySelector(".modal");
+  close.addEventListener("click", () => instance.close());
+}
